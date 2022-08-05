@@ -37,7 +37,7 @@ RegisterNetEvent('eotix-drugsale:menu', function()
         else
             table.insert(menuTable, { id = 6, header = 'Get rid of the buyer!', txt = "", params = { event = "eotix-drugsale:GetBuyertAway", args = { }, }, })
         end
-        TriggerEvent('nh-context:sendMenu', menuTable)
+        exports['zf_context']:openMenu(menuTable)
     else
         exports['mythic_notify']:DoHudText('error', 'YOU CAN OFFER IN 2 MINUTES')
     end
